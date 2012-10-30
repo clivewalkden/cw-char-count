@@ -1,0 +1,11 @@
+/*
+    Document   : jquery.cw_charcount-0.1
+    Created on : Oct 29, 2012, 6:59:30 PM
+    Author     : Clive Walkden <clive@cwenterprises.co.uk>
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+.cw_count				{ border: 1px solid #b0b1b3; color: #666666; float: left; margin-left: 5px; padding: 4px; }
+.cw_count_warning		{ border: 1px solid #c10000; color: #c10000; }
+
