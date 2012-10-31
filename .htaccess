@@ -7,12 +7,12 @@ ErrorDocument 500 /500.php
 
 Options +FollowSymLinks
 RewriteEngine on
-RewriteCond %{HTTP_HOST} ^katiebonas.co.uk$ [OR]
-RewriteCond %{HTTP_HOST} ^katiebonas.com$ [OR]
-RewriteCond %{HTTP_HOST} ^www.katiebonas.com$
-RewriteRule ^(.*)$ http://www.katiebonas.co.uk/$1 [R=301,L]
+#RewriteCond %{HTTP_HOST} ^katiebonas.co.uk$ [OR]
+#RewriteCond %{HTTP_HOST} ^katiebonas.com$ [OR]
+#RewriteCond %{HTTP_HOST} ^www.katiebonas.com$
+#RewriteRule ^(.*)$ http://www.katiebonas.co.uk/$1 [R=301,L]
 
-RewriteRule ^(index)\.(php|asp|htm|html)$ http://www.katiebonas.co.uk/ [R=301,L]
+#RewriteRule ^(index)\.(php|asp|htm|html)$ http://www.katiebonas.co.uk/ [R=301,L]
 
 
 <IfModule mod_rewrite.c>
