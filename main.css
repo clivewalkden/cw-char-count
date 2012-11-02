@@ -109,6 +109,18 @@ td { vertical-align: top; }
    Author: Clive Walkden
    ========================================================================== */
 
+#container  { width: 990px; margin: 0 auto; }
+
+#content    { padding: 15px; }
+
+form label  { float: left; width: 180px; line-height: 1.8em; }
+form input  { padding: 0.2em; margin-bottom: 0.5em; border: 1px solid #06e; }
+
+.br         { clear: both; }
+
+.button     { padding: 0.5em 0.75em; border: medium none; background: #06e; color: #fff; text-transform: uppercase; }
+
+.radius1    { -moz-border-radius: 6px; -ms-border-radius: 6px; -o-border-radius: 6px; -webkit-border-radius: 6px; border-radius: 6px; }
 
 
 /* ==|== media queries ======================================================

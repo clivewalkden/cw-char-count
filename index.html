@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <title>CWCharCount</title>
 <meta name="description" content="">
 
@@ -12,49 +11,54 @@
 <body>
 <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
 
-<header>
+<div id="container">
+    <header>
 
-</header>
+    </header>
 
-<div role="main">
-    <h1>CW CharCount v0.1</h1>
-    <p>This script shows a visual counter next to the input field showing the number of characters remaining for the given field.</p>
-    <p>Basic usage</p>
-    <form action="#" method="post" id="example1">
-        <label for="name">Name:</label>
-        <input type="text" name="name" id="name" maxlength="255">
+    <div role="main" id="content">
+        <h1>CW CharCount v0.1</h1>
+        <p>This script shows a visual counter next to the input field showing the number of characters remaining for the given field.</p>
+        <p>Basic usage</p>
+        <form action="#" method="post" id="example1">
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" maxlength="255">
+            <br class="br">
 
-        <label for="email">Email:</label>
-        <input type="email" name="email" id="email" maxlength="255">
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" maxlength="255">
+            <br class="br">
 
-        <label for="question">Favourite 4 Letter word</label>
-        <input type="text" name="question" id="question" maxlength="4">
+            <label for="question">Favourite 4 Letter word</label>
+            <input type="text" name="question" id="question" maxlength="4">
+            <br class="br">
 
-        <input type="submit" name="submit" id="submit" value="Submit Form">
-    </form>
-    <h3>Configuration Options</h3>
-    <p>The script has 3 options:</p>
-    <ul>
-        <li>default_class</li>
-        <li>warning_level</li>
-        <li>warning_class</li>
-    </ul>
-    <h4>default_class</h4>
-    <p>The class given to the count object.</p>
-    <p>This class is applied to the count field on startup and allows you to set the styles needed for it to blend in with your current site styling.</p>
-    <p>default: 'cw_count'</p>
-    <h4>warning_level</h4>
-    <p>The number of characters remaining before the warning class is added to the count object.</p>
-    <p>default: '15'</p>
-    <h4>warning_level</h4>
-    <p>The class applied when the warning limit is reached.</p>
-    <p>This class is added to the count field once the warning level has been reached. It is removed if the character count increases above the warning level.</p>
-    <p>default: 'cw_count_warning'</p>
+            <input type="submit" name="submit" id="submit" value="Submit Form" class="button radius">
+        </form>
+        <h3>Configuration Options</h3>
+        <p>The script has 3 options:</p>
+        <ul>
+            <li>default_class</li>
+            <li>warning_level</li>
+            <li>warning_class</li>
+        </ul>
+        <h4>default_class</h4>
+        <p>The class given to the count object.</p>
+        <p>This class is applied to the count field on startup and allows you to set the styles needed for it to blend in with your current site styling.</p>
+        <p>default: 'cw_count'</p>
+        <h4>warning_level</h4>
+        <p>The number of characters remaining before the warning class is added to the count object.</p>
+        <p>default: '15'</p>
+        <h4>warning_level</h4>
+        <p>The class applied when the warning limit is reached.</p>
+        <p>This class is added to the count field once the warning level has been reached. It is removed if the character count increases above the warning level.</p>
+        <p>default: 'cw_count_warning'</p>
+    </div>
+
+    <footer>
+
+    </footer>
 </div>
-
-<footer>
-
-</footer>
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="/js/jquery-1.7.1.min.js"><\/script>')</script>
