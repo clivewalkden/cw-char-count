@@ -1,14 +1,14 @@
 /*!
  * Char Count Script - for jQuery 1.7+
- * http://www.cwenterprises.co.uk
+ * http://clivewalkden.co.uk
  *
- * Copyright 2012, Clive Walkden (http://www.cwenterprises.co.uk)
+ * Copyright 2012, Clive Walkden (http://clivewalkden.co.uk)
  *
  * @package Char Count Script
- * @author Clive Walkden (http://www.cwenterprises.co.uk)
- * @version 1.0.0
- * @copyright Copyright (c) 2012 SOZO Design Ltd (http://www.cwenterprises.co.uk)
- * @date: 29-10-2012
+ * @author Clive Walkden (http://clivewalkden.co.uk)
+ * @version 0.2.0
+ * @copyright Copyright (c) 2013 SOZO Design Ltd (http://clivewalkden.co.uk)
+ * @date: 28-08-2013
  */
 
 (function($){
@@ -31,12 +31,17 @@
 			var	count_object = 'cw_count_'+$(self).attr('id'),
 				maxlength = $(self).attr('maxlength'),
 				charcount = $(self).val().length,
-				remaining = '';
+				remaining = '',
+				control = $(self).data('control');
 
 
 			remaining = maxlength-charcount;
 
-			$(self).after('<span id="'+count_object+'" class="'+settings.default_class+'">'+remaining+'</span>');
+			if(control) {
+				$('#'+control).attr('id',count_object).addClass(settings.default_class).html(remaining);
+			}else{
+				$(self).after('<span id="'+count_object+'" class="'+settings.default_class+'">'+remaining+'</span>');
+			}
 
 			$(self).on(
 				'keyup', function(){
