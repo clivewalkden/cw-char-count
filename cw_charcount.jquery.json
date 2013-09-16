@@ -1,0 +1,29 @@
+{
+    "name": "cw_charcount",
+    "title": "jQuery CW Charcount Plugin",
+    "description": "This script shows a visual counter next to the input field showing the number of characters remaining for the given field.",
+    "keywords": [
+        "form",
+        "input",
+        "string count"
+    ],
+    "version": "0.2.0",
+    "author": {
+        "name": "Clive Walkden",
+        "email": "clive@clivewalkden.co.uk",
+        "url": "https://github.com/clivewalkden"
+    },
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "https://raw.github.com/fschaefer/jquery-behavior/master/MIT-LICENSE.txt"
+        }
+    ],
+    "bugs": "https://github.com/clivewalkden/CWCharCount/issues",
+    "homepage": "https://github.com/clivewalkden/CWCharCount",
+    "docs": "http://clivewalkden.co.uk/code/cw_charcount/",
+    "download": "https://github.com/clivewalkden/CWCharCount/archive/master.zip",
+    "dependencies": {
+        "jquery": ">=1.7"
+    }
+}
