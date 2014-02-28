@@ -1,0 +1,12 @@
+/*!
+* cw-charcount - for jQuery 1.7+
+* http://clivewalkden.co.uk/code/cw_charcount/
+*
+* Copyright 2014, Clive Walkden (http://clivewalkden.co.uk)
+*
+* @package This script shows a visual counter next to the input field showing the number of characters remaining for the given field.
+* @author Clive Walkden (http://clivewalkden.co.uk/)
+* @version 0.2.0
+* @copyright Copyright (c) 2014 Clive Walkden (http://clivewalkden.co.uk/)
+* @date: 2014-02-28
+*/.cw_count{border:1px solid #b0b1b3;color:#666;margin-left:5px;padding:4px}.cw_count_warning{border:1px solid #c10000;color:#c10000}
