@@ -118,7 +118,7 @@ module.exports = function (grunt) {
         updateConfigs: [],
         commit: true,
         commitMessage: 'Release v%VERSION%',
-        commitFiles: ['package.json'], // '-a' for all files
+        commitFiles: ['-a'], // '-a' for all files
         createTag: true,
         tagName: 'v%VERSION%',
         tagMessage: 'Version %VERSION%',
@@ -135,7 +135,7 @@ module.exports = function (grunt) {
   // Default task.
   grunt.registerTask('default', ['jshint', 'connect', 'qunit', 'clean', 'concat', 'uglify']);
   grunt.registerTask('minify', ['jshint', 'clean', 'concat', 'uglify', 'cssmin']);
-  grunt.registerTask('bump', ['clean','concat','uglify', 'cssmin']); // Options for bump are grunt bump :patch :minor :major :build :git
+  grunt.registerTask('bump'); // Options for bump are grunt bump :patch :minor :major :build :git
   grunt.registerTask('server', ['connect', 'watch']);
   grunt.registerTask('test', ['jshint', 'connect', 'qunit']);
 };
