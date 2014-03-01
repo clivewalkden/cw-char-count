@@ -28,6 +28,10 @@ _(Coming soon)_
 _(Coming soon)_
 
 ## Release History
+#### 0.3.0 - 28th February 2014
+ * Use grunt to process files
+ * Added Bower support
+
 #### 0.2.0 - 28th August 2013
  * Updated to include the data-control option
 
