@@ -1,16 +1,3 @@
-/*!
- * Char Count Script - for jQuery 1.7+
- * http://clivewalkden.co.uk
- *
- * Copyright 2012, Clive Walkden (http://clivewalkden.co.uk)
- *
- * @package Char Count Script
- * @author Clive Walkden (http://clivewalkden.co.uk)
- * @version 0.2.0
- * @copyright Copyright (c) 2013 SOZO Design Ltd (http://clivewalkden.co.uk)
- * @date: 28-08-2013
- */
-
 (function($){
 	$.fn.CWCharCount = function(custom) {
 
@@ -34,7 +21,6 @@
 				remaining = '',
 				control = $(self).data('control');
 
-
 			remaining = maxlength-charcount;
 
 			if(control) {
@@ -57,12 +43,9 @@
 						$('#'+count_object).removeClass(settings.warning_class);
 					}
 
-
 					$('#'+count_object).text(maxlength - charcount);
 				}
-			)
+			);
 		});
-
-	}
-
+	};
 })(jQuery);
