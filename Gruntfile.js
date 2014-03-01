@@ -135,7 +135,7 @@ module.exports = function (grunt) {
   // Default task.
   grunt.registerTask('default', ['jshint', 'connect', 'qunit', 'clean', 'concat', 'uglify']);
   grunt.registerTask('minify', ['jshint', 'clean', 'concat', 'uglify', 'cssmin']);
-  grunt.registerTask('bump'); // Options for bump are grunt bump :patch :minor :major :build :git
+  //grunt.registerTask('bump'); // Options for bump are grunt bump :patch :minor :major :build :git
   grunt.registerTask('server', ['connect', 'watch']);
   grunt.registerTask('test', ['jshint', 'connect', 'qunit']);
 };

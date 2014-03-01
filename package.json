@@ -1,6 +1,6 @@
 {
   "name": "cw-charcount",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "This script shows a visual counter next to the input field showing the number of characters remaining for the given field.",
   "keywords": [
     "jquery-plugin"
