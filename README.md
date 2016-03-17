@@ -32,6 +32,7 @@ For examples please see [the website](https://clivewalkden.co.uk/code/cw_charcou
  * Updated unit tests
  * Updated links to Github instead of BitBucket
  * Updated files to latest versions
+ * Added AMD compatibility to the plugin
 
 #### 0.3.0 - 28th February 2014
  * Use grunt to process files
