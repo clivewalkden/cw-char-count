@@ -1,20 +1,36 @@
 {
   "name": "cw-charcount",
-  "version": "0.3.0",
-  "ignore": [
-  	"src",
-  	"**/*.txt",
-  	".editorconfig",
-  	".travis.yml",
-  	".bowerrc",
-  	".jshintrc",
-  	"CONTRIBUTING.md"
+  "version": "0.3.1",
+  "homepage": "http://clivewalkden.co.uk/code/cw-abandon-mouse-tracker/",
+  "authors": [
+    "Clive Walkden <clive@sozodesign.co.uk>"
   ],
-  "dependencies": {
-  	"jquery": "~1.8.2"
+  "description": "Plugin to check when the mouse pointer is out of the viewport",
+  "main": "dist/jquery.cw-charcount.min.js",
+  "moduleType": [
+    "amd"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "src",
+    "test",
+    "libs",
+    "**/*.txt",
+    ".editorconfig",
+    ".travis.yml",
+    ".bowerrc",
+    ".jshintrc",
+    ".gitignore",
+    "index.html",
+    "test.html",
+    "CONTRIBUTING.md",
+    "Gruntfile.js"
+  ],
+  "dependancies": {
+    "jquery": "~1.7.2",
+    "jquery.cookie": "1.4.1"
   },
   "devDependencies": {
-    "qunit": "~1.12.0",
-    "jquery": "~1.8.2"
+    "qunit": "~1.12.0"
   }
 }

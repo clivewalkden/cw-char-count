@@ -6,11 +6,11 @@
         "form",
         "input"
     ],
-    "version": "0.3.0",
+    "version": "0.3.1",
     "author": {
         "name": "Clive Walkden",
         "email": "clive@clivewalkden.co.uk",
-        "url": "https://github.com/clivewalkden"
+        "url": "https://clivewalkden.co.uk"
     },
     "licenses": [
         {
@@ -20,7 +20,7 @@
     ],
     "bugs": "https://github.com/clivewalkden/CWCharCount/issues",
     "homepage": "https://github.com/clivewalkden/CWCharCount",
-    "docs": "http://clivewalkden.co.uk/code/cw_charcount/",
+    "docs": "https://clivewalkden.co.uk/code/cw_charcount/",
     "download": "https://github.com/clivewalkden/CWCharCount/archive/master.zip",
     "dependencies": {
         "jquery": ">=1.7"

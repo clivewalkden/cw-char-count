@@ -3,9 +3,9 @@
 
 		// Default plugin settings
 		var defaults = {
-            default_class   : 'cw_count',
-			warning_level	: 15,
-			warning_class	: 'cw_count_warning'
+      default_class  : 'cw_count',
+			warning_level  : 15,
+			warning_class  : 'cw_count_warning'
 		};
 
 		// Merge default and user settings
