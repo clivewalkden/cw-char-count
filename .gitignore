@@ -1,5 +1,4 @@
-/nbproject/
-.htaccess
 /node_modules/
 /bower_components/
-test
+dist
+sftp-config.json

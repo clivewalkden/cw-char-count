@@ -22,12 +22,17 @@ $(function($) {
 ```
 
 ## Documentation
-_(Coming soon)_
+For documentation please see [the website](https://clivewalkden.co.uk/code/cw_charcount/)
 
 ## Examples
-_(Coming soon)_
+For examples please see [the website](https://clivewalkden.co.uk/code/cw_charcount/)
 
 ## Release History
+#### 0.3.1 - 17th March 2016
+ * Updated unit tests
+ * Updated links to Github instead of BitBucket
+ * Updated files to latest versions
+
 #### 0.3.0 - 28th February 2014
  * Use grunt to process files
  * Added Bower support
@@ -43,4 +48,4 @@ _(Coming soon)_
 
 #### Maintainer
 
-[Clive Walkden](http://clivewalkden.co.uk)
+[Clive Walkden](https://clivewalkden.co.uk)

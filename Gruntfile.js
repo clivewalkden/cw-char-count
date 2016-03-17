@@ -19,6 +19,7 @@ module.exports = function (grunt) {
       '* @package <%= pkg.description %>\n' +
       '* @author <%= pkg.author.name %> (<%= pkg.author.url %>)\n' +
       '* @version <%= pkg.version %>\n' +
+      '* @license <%= pkg.license %>\n' +
       '* @copyright Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %> (<%= pkg.author.url %>)\n' +
       '* @date: <%= grunt.template.today("yyyy-mm-dd") %>\n' +
       '*/\n\n',
@@ -63,7 +64,9 @@ module.exports = function (grunt) {
     qunit: {
       all: {
         options: {
-          urls: ['http://localhost:9000/test/<%= pkg.name %>.html']
+          urls: ['1.7.0','1.7.2','1.8.0','1.8.3','1.9.0','1.9.1','1.10.2','1.11.3','1.12.0','2.0.3','2.1.4','2.2.0'].map(function(version) {
+            return 'http://localhost:<%= connect.server.options.port %>/test/<%= pkg.name %>.html?jquery=' + version;
+          })
         }
       }
     },
@@ -107,8 +110,8 @@ module.exports = function (grunt) {
     connect: {
       server: {
         options: {
-          hostname: '*',
-          port: 9000
+          //hostname: '*',
+          port: 8085
         }
       }
     },
@@ -138,4 +141,6 @@ module.exports = function (grunt) {
   //grunt.registerTask('bump'); // Options for bump are grunt bump :patch :minor :major :build :git
   grunt.registerTask('server', ['connect', 'watch']);
   grunt.registerTask('test', ['jshint', 'connect', 'qunit']);
+
+  grunt.registerTask('launch', ['clean','concat','uglify','cssmin']);
 };

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>CWCharCount v0.3.1 | jQuery Plugin | Clive Walkden</title>
+<meta name="description" content="CWCharCount is a simple jQuery script which counts down the number of remaining characters for a input box">
+
+<meta name="viewport" content="width=device-width">
+
+<link href="//fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+
+<link href="//clivewalkden.co.uk/code/template/css/bootstrap.css" rel="stylesheet">
+<link href="//clivewalkden.co.uk/code/template/css/main.css" rel="stylesheet">
+<link href="dist/jquery.cw-charcount.css" rel="stylesheet">
+<link href="//clivewalkden.co.uk/code/template/css/prettify.css" rel="stylesheet">
+</head>
+<body>
+<!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+
+    <header>
+		<div class="container">
+			<div class="row">
+				<div class="span6">
+					<h1>CW CharCount v0.3.1</h1>
+				</div>
+				<div class="span6">
+					<h2>A character limit countdown script</h2>
+				</div>
+			</div>
+		</div>
+    </header>
+
+    <div class="container">
+		<div class="row">
+			<div class="span12 center">
+				<a href="https://github.com/clivewalkden/cwCharCount" class="btn btn-large btn-inverse" target="_blank">View Project on Github »</a>
+				<a href="https://github.com/clivewalkden/cwCharCount/archive/master.zip" class="btn btn-large">Download CW CharCount</a>
+			</div>
+		</div>
+	</div>
+
+	<div role="main" class="container">
+		<div class="row">
+			<div class="span12">
+        <img src="https://travis-ci.org/clivewalkden/cwCharCount.svg?branch=master">
+				<p>This script shows a visual counter next to the input field showing the number of characters remaining for the given field.</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="span12">
+				<div class="page-header">
+					<h1>Basic Usage</h1>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="span12">
+				<p>The code below...</p>
+				<pre class="prettyprint linenums lang-html">&lt;form action="#" method="post" id="example1"&gt;
+	&lt;label for="example1name"&gt;Name:&lt;/label&gt;
+	&lt;input type="text" name="name" id="example1name" maxlength="255"&gt;
+&lt;/form&gt;
+
+&lt;script&gt;
+// Finally call the script
+$(function(){
+	$('#example1 input[maxlength]').CWCharCount();
+});
+&lt;/script&gt;</pre>
+			</div>
+			<div class="span12">
+				<p>... produces this</p>
+				<form action="#" method="post" id="example1">
+					<label for="example1name">Name:</label>
+					<input type="text" name="name" id="example1name" maxlength="255">
+				</form>
+			</div>
+		</div>
+		<div class="row">
+			<div class="span12">
+				<div class="page-header">
+					<h1>Configuration Options</h1>
+				</div>
+			</div>
+			<div class="span12">
+				<table class="table table-bordered">
+				<tr>
+					<th>Property</th>
+					<th>Type</th>
+					<th>Default</th>
+					<th>Description</th>
+				</tr>
+				<tr>
+					<td>default_class</td>
+					<td>string</td>
+					<td><code>'cw_count'</code></td>
+					<td>This class is applied to the count field on startup and allows you to set the styles needed for it to blend in with your current site styling.</td>
+				</tr>
+				<tr>
+					<td>warning_level</td>
+					<td>int</td>
+					<td><code>15</code></td>
+					<td>The number of characters remaining before the warning class is added to the count object.</td>
+				</tr>
+				<tr>
+					<td>warning_class</td>
+					<td>string</td>
+					<td><code>'cw_count_warning'</code></td>
+					<td>This class is added to the count field once the warning level has been reached. It is removed if the character count increases above the warning level.</td>
+				</tr>
+				</table>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="span12">
+				<div class="page-header">
+					<h1>Other Examples</h1>
+				</div>
+				<p>Below are some more examples of the script.</p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="span12">
+				<h3>Alternative Demo</h3>
+				<p>This demo uses the data-control attribute to control where the countdown is output. I've used Twitter Bootstrap's appended inputs to output the countdown.</p>
+				<p><strong>Code:</strong></p>
+				<pre class="prettyprint linenums lang-html">&lt;form action="#" method="post" id="example2"&gt;
+	&lt;label for="example2name"&gt;Name:&lt;/label&gt;
+	&lt;div class="input-append"&gt;
+		&lt;input type="text" name="name" id="example2name" data-control="ex2name-control" maxlength="50"&gt;
+		&lt;span class="add-on" id="ex2name-control"&gt;&lt;/span&gt;
+	&lt;/div&gt;
+
+	&lt;label for="example2email"&gt;Email&lt;/label&gt;
+	&lt;div class="input-append"&gt;
+		&lt;input type="text" name="name" id="example2email" data-control="ex2email-control" maxlength="255"&gt;
+		&lt;span class="add-on" id="ex2email-control"&gt;&lt;/span&gt;
+	&lt;/div&gt;
+	&lt;br class="br"&gt;
+	&lt;button type="submit" class="btn"&gt;Submit Form&lt;/button&gt;
+&lt;/form&gt;
+
+&lt;script&gt;
+// Finally call the script
+$('#example2 input[maxlength]').CWCharCount({
+	default_class: 'input',
+	warning_level: 3
+});
+&lt;/script&gt;</pre>
+				<p><strong>Example:</strong></p>
+				<form action="#" method="post" id="example2">
+					<label for="example2name">Name:</label>
+					<div class="input-append">
+						<input type="text" name="name" id="example2name" data-control="ex2name-control" maxlength="50">
+						<span class="add-on" id="ex2name-control"></span>
+					</div>
+
+					<label for="example2email">Email</label>
+					<div class="input-append">
+						<input type="text" name="name" id="example2email" data-control="ex2email-control" maxlength="255">
+						<span class="add-on" id="ex2email-control"></span>
+					</div>
+					<br class="br">
+					<button type="submit" class="btn">Submit Form</button>
+				</form>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="span12">
+				<div class="page-header">
+					<h1>Changelog</h1>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="span12">
+				<table class="table table-bordered table-striped">
+        <tr>
+          <td><strong>v0.3.1</strong></td>
+          <td>17th March 2016</td>
+          <td>Updated unit tests<br>
+             Updated links to Github instead of BitBucket<br>
+             Updated files to latest versions</td>
+        </tr>
+        <tr>
+          <td><strong>v0.3</strong></td>
+          <td>28th February 2014</td>
+          <td>Use grunt to process files<br>
+              Added Bower support</td>
+        </tr>
+				<tr>
+					<td><strong>v0.2</strong></td>
+					<td>28th August 2013</td>
+					<td>Updated to include the data-control option.</td>
+				</tr>
+				<tr>
+					<td><strong>v0.1</strong></td>
+					<td>6th November 2012</td>
+					<td>Created the first version of the script based on previous created scripts.</td>
+				</tr>
+				</table>
+			</div>
+		</div>
+    </div>
+
+    <footer>
+
+    </footer>
+
+<!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script> -->
+<script>window.jQuery || document.write('<script src="bower_components/jquery/jquery.js"><\/script>')</script>
+
+<script src="src/cw-charcount.js?v=0.3.1"></script>
+<script src="//clivewalkden.co.uk/code/template/js/bootstrap.js"></script>
+<script src="//clivewalkden.co.uk/code/template/js/prettify.js"></script>
+
+<script>
+$(function(){
+	window.prettyPrint && prettyPrint();
+})
+</script>
+
+<script>
+$(function(){
+    $('#example1 input[maxlength]').CWCharCount();
+
+	$('#example2 input[maxlength]').CWCharCount({
+		default_class: 'input',
+		warning_level: 3
+	});
+});
+</script>
+
+<script>
+//var _gaq=[['_setAccount','UA-00000000-1'],['_trackPageview']];
+//(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+//g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+//s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+
+</body>
+</html>
