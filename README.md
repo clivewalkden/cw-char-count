@@ -1,5 +1,7 @@
 # CW Charcount
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/clivewalkden/cw-char-count.svg)](https://greenkeeper.io/)
+
 This script shows a visual counter next to the input field showing the number of characters remaining for the given field.
 
 ## Getting Started
